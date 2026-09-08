@@ -7,6 +7,73 @@
 <meta name="description" content="AHNO's project implementation experience, partners and donors, cluster memberships, and value proposition.">
 <link rel="icon" href="img/logo.png">
 <link rel="stylesheet" href="css/style.css">
+<style>
+  /* --- Partner & donor logo wall (scoped to this page) --- */
+  .partner-subhead {
+    font-size: 0.78rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--ink-muted, #6b7280);
+    margin: 0 0 18px;
+  }
+  .logo-wall {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 16px;
+    margin: 0 0 44px;
+  }
+  .logo-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 18px;
+    background: #fff;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+    transition: box-shadow .2s ease, transform .2s ease, border-color .2s ease;
+  }
+  .logo-card:hover {
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+    transform: translateY(-2px);
+    border-color: rgba(15, 23, 42, 0.14);
+  }
+  .logo-card svg {
+    flex: 0 0 auto;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+  }
+  .logo-card .logo-name {
+    font-size: 0.86rem;
+    line-height: 1.25;
+    font-weight: 600;
+    color: #1f2937;
+  }
+  .logo-card .logo-name small {
+    display: block;
+    font-weight: 400;
+    font-size: 0.74rem;
+    color: var(--ink-muted, #6b7280);
+    margin-top: 2px;
+  }
+  .partner-note {
+    font-size: 0.9rem;
+    color: var(--ink-muted, #6b7280);
+    margin: -28px 0 44px;
+  }
+  .gov-divider {
+    border: none;
+    border-top: 1px solid rgba(15, 23, 42, 0.1);
+    margin: 8px 0 32px;
+  }
+  @media (max-width: 640px) {
+    .logo-wall { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+    .logo-card { padding: 12px 14px; }
+    .logo-card svg { width: 38px; height: 38px; }
+  }
+</style>
 </head>
 <body>
 
@@ -93,19 +160,19 @@
       <table>
         <thead>
           <tr>
-            <th>#</th><th>Project title</th><th>Province(s)</th><th>Donor</th><th>Budget</th><th>Duration</th>
+            <th>#</th><th>Project title</th><th>Province(s)</th><th>Donor</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td class="num-cell">1</td><td>OPD Project Consultations (volunteer)</td><td>Maidan Wardak</td><td>AHNO</td><td>$800</td><td>Aug 2023</td></tr>
-          <tr><td class="num-cell">2</td><td>Emergency Preparedness Plan (EPP) for AFGA</td><td>Kabul</td><td>AFGA (IPPF)</td><td>$5,500</td><td>Nov 2023 – Jan 2024</td></tr>
-          <tr><td class="num-cell">3</td><td>Baseline Market Study &amp; Pre-Evaluation, 6 provinces</td><td>Kunar, Laghman, Nangarhar, Balkh, Kabul</td><td>Islamic Relief (IRW)</td><td>$11,000</td><td>Feb – Apr 2024</td></tr>
-          <tr><td class="num-cell">4</td><td>Study &amp; Analysis of Women-Owned Businesses</td><td>Bamyan, Maidan Wardak</td><td>AHNO</td><td>$1,200</td><td>May 2024</td></tr>
-          <tr><td class="num-cell">5</td><td>Endline Survey — Integrated Community Resilience Activity (ICRA)</td><td>Kandahar, Helmand, Urozgan, Balkh, Faryab</td><td>NCA</td><td>$5,106</td><td>Jun 2024</td></tr>
-          <tr><td class="num-cell">6</td><td>CSO-RNT Khost Project</td><td>Khost</td><td>SFCG</td><td>$10,000</td><td>Mar – Oct 2024</td></tr>
-          <tr><td class="num-cell">7</td><td>TPM of Food Assistance &amp; Cash Distribution</td><td>Parwan</td><td>AYSO</td><td>$14,000</td><td>Dec 2023 – Feb 2024</td></tr>
-          <tr><td class="num-cell">8</td><td>OPD Clinical Survey</td><td>Farah</td><td>AYSO</td><td>$12,500</td><td>Jan – Apr 2025</td></tr>
-          <tr><td class="num-cell">9</td><td>Livelihood Project</td><td>Ghazni</td><td>AAR Japan</td><td>$250,000</td><td>Jun – Oct 2025</td></tr>
+          <tr><td class="num-cell">1</td><td>OPD Project Consultations (volunteer)</td><td>Maidan Wardak</td><td>AHNO</td></tr>
+          <tr><td class="num-cell">2</td><td>Emergency Preparedness Plan (EPP) for AFGA</td><td>Kabul</td><td>AFGA (IPPF)</td></tr>
+          <tr><td class="num-cell">3</td><td>Baseline Market Study &amp; Pre-Evaluation, 6 provinces</td><td>Kunar, Laghman, Nangarhar, Balkh, Kabul</td><td>Islamic Relief (IRW)</td></tr>
+          <tr><td class="num-cell">4</td><td>Study &amp; Analysis of Women-Owned Businesses</td><td>Bamyan, Maidan Wardak</td><td>AHNO</td></tr>
+          <tr><td class="num-cell">5</td><td>Endline Survey — Integrated Community Resilience Activity (ICRA)</td><td>Kandahar, Helmand, Urozgan, Balkh, Faryab</td><td>NCA</td></tr>
+          <tr><td class="num-cell">6</td><td>CSO-RNT Khost Project</td><td>Khost</td><td>SFCG</td></tr>
+          <tr><td class="num-cell">7</td><td>TPM of Food Assistance &amp; Cash Distribution</td><td>Parwan</td><td>AYSO</td></tr>
+          <tr><td class="num-cell">8</td><td>OPD Clinical Survey</td><td>Farah</td><td>AYSO</td></tr>
+          <tr><td class="num-cell">9</td><td>Livelihood Project</td><td>Ghazni</td><td>AAR Japan</td></tr>
         </tbody>
       </table>
     </div>
@@ -119,15 +186,59 @@
       <h2>Collaboration across the sector.</h2>
       <p>AHNO has collaborated with a range of national and international organizations and stakeholders.</p>
     </div>
-    <div class="badge-grid" style="margin-bottom:48px;">
-      <span class="badge">NCA — Norwegian Church Aid</span>
-      <span class="badge">AAR Japan</span>
-      <span class="badge">SFCG — Search for Common Ground</span>
-      <span class="badge">AYSO</span>
-      <span class="badge">AFGA</span>
-      <span class="badge">Islamic Relief (IRW)</span>
-      <span class="badge">National authorities &amp; community stakeholders</span>
+    <p class="partner-subhead">Donors &amp; implementing partners</p>
+    <div class="logo-wall">
+      <div class="logo-card">
+        <svg viewBox="0 0 60 60" role="img" aria-label="NCA logo"><circle cx="30" cy="30" r="30" fill="#2b5f8a"/><text x="30" y="36" text-anchor="middle" font-size="16" font-weight="700" fill="#fff" font-family="Arial, Helvetica, sans-serif">NCA</text></svg>
+        <span class="logo-name">NCA<small>Norwegian Church Aid</small></span>
+      </div>
+      <div class="logo-card">
+        <svg viewBox="0 0 60 60" role="img" aria-label="AAR Japan logo"><circle cx="30" cy="30" r="30" fill="#b3312c"/><text x="30" y="35" text-anchor="middle" font-size="13" font-weight="700" fill="#fff" font-family="Arial, Helvetica, sans-serif">AAR</text></svg>
+        <span class="logo-name">AAR Japan<small>Association for Aid and Relief</small></span>
+      </div>
+      <div class="logo-card">
+        <svg viewBox="0 0 60 60" role="img" aria-label="SFCG logo"><circle cx="30" cy="30" r="30" fill="#1f7a6c"/><text x="30" y="35" text-anchor="middle" font-size="13" font-weight="700" fill="#fff" font-family="Arial, Helvetica, sans-serif">SFCG</text></svg>
+        <span class="logo-name">SFCG<small>Search for Common Ground</small></span>
+      </div>
+      <div class="logo-card">
+        <svg viewBox="0 0 60 60" role="img" aria-label="AYSO logo"><circle cx="30" cy="30" r="30" fill="#c76b1f"/><text x="30" y="35" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="Arial, Helvetica, sans-serif">AYSO</text></svg>
+        <span class="logo-name">AYSO<small>Afghan Youth &amp; Social Org.</small></span>
+      </div>
+      <div class="logo-card">
+        <svg viewBox="0 0 60 60" role="img" aria-label="AFGA logo"><circle cx="30" cy="30" r="30" fill="#6a4c93"/><text x="30" y="35" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="Arial, Helvetica, sans-serif">AFGA</text></svg>
+        <span class="logo-name">AFGA<small>Afghan Family Guidance Assoc.</small></span>
+      </div>
+      <div class="logo-card">
+        <svg viewBox="0 0 60 60" role="img" aria-label="Islamic Relief logo"><circle cx="30" cy="30" r="30" fill="#2f7a3d"/><text x="30" y="35" text-anchor="middle" font-size="15" font-weight="700" fill="#fff" font-family="Arial, Helvetica, sans-serif">IRW</text></svg>
+        <span class="logo-name">Islamic Relief<small>IRW</small></span>
+      </div>
     </div>
+    <p class="partner-note">AHNO also works closely with national authorities and community stakeholders across every province of operation.</p>
+
+    <p class="partner-subhead">Government counterparts</p>
+    <div class="logo-wall">
+      <div class="logo-card">
+        <svg viewBox="0 0 60 60" role="img" aria-label="Ministry of Economy logo"><circle cx="30" cy="30" r="30" fill="#1c3b57"/><text x="30" y="35" text-anchor="middle" font-size="15" font-weight="700" fill="#fff" font-family="Arial, Helvetica, sans-serif">MoEc</text></svg>
+        <span class="logo-name">Ministry of Economy<small>Islamic Emirate of Afghanistan</small></span>
+      </div>
+      <div class="logo-card">
+        <svg viewBox="0 0 60 60" role="img" aria-label="Ministry of Education logo"><circle cx="30" cy="30" r="30" fill="#1b6b93"/><text x="30" y="35" text-anchor="middle" font-size="15" font-weight="700" fill="#fff" font-family="Arial, Helvetica, sans-serif">MoE</text></svg>
+        <span class="logo-name">Ministry of Education<small>Islamic Emirate of Afghanistan</small></span>
+      </div>
+      <div class="logo-card">
+        <svg viewBox="0 0 60 60" role="img" aria-label="Ministry of Labor and Social Affairs logo"><circle cx="30" cy="30" r="30" fill="#8a6d1f"/><text x="30" y="35" text-anchor="middle" font-size="13" font-weight="700" fill="#fff" font-family="Arial, Helvetica, sans-serif">MoLSA</text></svg>
+        <span class="logo-name">Ministry of Labor &amp; Social Affairs<small>Islamic Emirate of Afghanistan</small></span>
+      </div>
+      <div class="logo-card">
+        <svg viewBox="0 0 60 60" role="img" aria-label="ANDMA logo"><circle cx="30" cy="30" r="30" fill="#a13a3a"/><text x="30" y="35" text-anchor="middle" font-size="12" font-weight="700" fill="#fff" font-family="Arial, Helvetica, sans-serif">ANDMA</text></svg>
+        <span class="logo-name">ANDMA<small>National Disaster Management Authority</small></span>
+      </div>
+      <div class="logo-card">
+        <svg viewBox="0 0 60 60" role="img" aria-label="Ministry of Public Health logo"><circle cx="30" cy="30" r="30" fill="#2e7d5b"/><text x="30" y="35" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="Arial, Helvetica, sans-serif">MoPH</text></svg>
+        <span class="logo-name">Ministry of Public Health<small>Islamic Emirate of Afghanistan</small></span>
+      </div>
+    </div>
+    <hr class="gov-divider">
 
     <div id="clusters" class="two-col">
       <div>
