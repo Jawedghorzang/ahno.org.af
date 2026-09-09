@@ -39,12 +39,18 @@
     transform: translateY(-2px);
     border-color: rgba(15, 23, 42, 0.14);
   }
-  .logo-card svg {
+  .logo-card .partner-logo {
     flex: 0 0 auto;
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
+    width: 82px;
+    height: 62px;
+    object-fit: contain;
+    display: block;
   }
+  .logo-card .partner-logo[alt*="Search for Common Ground"],
+  .logo-card .partner-logo[alt*="Norwegian Church Aid"] {
+    width: 96px;
+  }
+
   .logo-card .logo-name {
     font-size: 0.86rem;
     line-height: 1.25;
@@ -71,7 +77,7 @@
   @media (max-width: 640px) {
     .logo-wall { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
     .logo-card { padding: 12px 14px; }
-    .logo-card svg { width: 38px; height: 38px; }
+    .logo-card .partner-logo { width: 68px; height: 54px; }
   }
 </style>
 </head>
@@ -189,27 +195,27 @@
     <p class="partner-subhead">Donors &amp; implementing partners</p>
     <div class="logo-wall">
       <div class="logo-card">
-        <svg viewBox="0 0 60 60" role="img" aria-label="NCA logo"><circle cx="30" cy="30" r="30" fill="#2b5f8a"/><text x="30" y="36" text-anchor="middle" font-size="16" font-weight="700" fill="#fff" font-family="Arial, Helvetica, sans-serif">NCA</text></svg>
+        <img class="partner-logo" src="img/partners/norwegian-church-aid.PNG" alt="Norwegian Church Aid logo">
         <span class="logo-name">NCA<small>Norwegian Church Aid</small></span>
       </div>
       <div class="logo-card">
-        <svg viewBox="0 0 60 60" role="img" aria-label="AAR Japan logo"><circle cx="30" cy="30" r="30" fill="#b3312c"/><text x="30" y="35" text-anchor="middle" font-size="13" font-weight="700" fill="#fff" font-family="Arial, Helvetica, sans-serif">AAR</text></svg>
+        <img class="partner-logo" src="img/partners/AAR-Japan.PNG" alt="AAR Japan logo">
         <span class="logo-name">AAR Japan<small>Association for Aid and Relief</small></span>
       </div>
       <div class="logo-card">
-        <svg viewBox="0 0 60 60" role="img" aria-label="SFCG logo"><circle cx="30" cy="30" r="30" fill="#1f7a6c"/><text x="30" y="35" text-anchor="middle" font-size="13" font-weight="700" fill="#fff" font-family="Arial, Helvetica, sans-serif">SFCG</text></svg>
+        <img class="partner-logo" src="img/partners/search-for-common-ground.png" alt="Search for Common Ground logo">
         <span class="logo-name">SFCG<small>Search for Common Ground</small></span>
       </div>
       <div class="logo-card">
-        <svg viewBox="0 0 60 60" role="img" aria-label="AYSO logo"><circle cx="30" cy="30" r="30" fill="#c76b1f"/><text x="30" y="35" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="Arial, Helvetica, sans-serif">AYSO</text></svg>
+        <img class="partner-logo" src="img/partners/Afghan-youth-services-organization.png" alt="Afghan Youth Services Organization logo">
         <span class="logo-name">AYSO<small>Afghan Youth &amp; Social Org.</small></span>
       </div>
       <div class="logo-card">
-        <svg viewBox="0 0 60 60" role="img" aria-label="AFGA logo"><circle cx="30" cy="30" r="30" fill="#6a4c93"/><text x="30" y="35" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="Arial, Helvetica, sans-serif">AFGA</text></svg>
+        <img class="partner-logo" src="img/partners/Afghan-family.png" alt="Afghan Family Guidance Association logo">
         <span class="logo-name">AFGA<small>Afghan Family Guidance Assoc.</small></span>
       </div>
       <div class="logo-card">
-        <svg viewBox="0 0 60 60" role="img" aria-label="Islamic Relief logo"><circle cx="30" cy="30" r="30" fill="#2f7a3d"/><text x="30" y="35" text-anchor="middle" font-size="15" font-weight="700" fill="#fff" font-family="Arial, Helvetica, sans-serif">IRW</text></svg>
+        <img class="partner-logo" src="img/partners/Islamic-relief.PNG" alt="Islamic Relief logo">
         <span class="logo-name">Islamic Relief<small>IRW</small></span>
       </div>
     </div>
@@ -218,23 +224,23 @@
     <p class="partner-subhead">Government counterparts</p>
     <div class="logo-wall">
       <div class="logo-card">
-        <svg viewBox="0 0 60 60" role="img" aria-label="Ministry of Economy logo"><circle cx="30" cy="30" r="30" fill="#1c3b57"/><text x="30" y="35" text-anchor="middle" font-size="15" font-weight="700" fill="#fff" font-family="Arial, Helvetica, sans-serif">MoEc</text></svg>
+        <img class="partner-logo" src="img/partners/Ministry-of-economy.png" alt="Ministry of Economy logo">
         <span class="logo-name">Ministry of Economy<small>Islamic Emirate of Afghanistan</small></span>
       </div>
       <div class="logo-card">
-        <svg viewBox="0 0 60 60" role="img" aria-label="Ministry of Education logo"><circle cx="30" cy="30" r="30" fill="#1b6b93"/><text x="30" y="35" text-anchor="middle" font-size="15" font-weight="700" fill="#fff" font-family="Arial, Helvetica, sans-serif">MoE</text></svg>
+        <img class="partner-logo" src="img/partners/Ministry-of-higher-education.PNG" alt="Ministry of Higher Education logo">
         <span class="logo-name">Ministry of Education<small>Islamic Emirate of Afghanistan</small></span>
       </div>
       <div class="logo-card">
-        <svg viewBox="0 0 60 60" role="img" aria-label="Ministry of Labor and Social Affairs logo"><circle cx="30" cy="30" r="30" fill="#8a6d1f"/><text x="30" y="35" text-anchor="middle" font-size="13" font-weight="700" fill="#fff" font-family="Arial, Helvetica, sans-serif">MoLSA</text></svg>
+        <img class="partner-logo" src="img/partners/Ministry-of-labor.png" alt="Ministry of Labor and Social Affairs logo">
         <span class="logo-name">Ministry of Labor &amp; Social Affairs<small>Islamic Emirate of Afghanistan</small></span>
       </div>
       <div class="logo-card">
-        <svg viewBox="0 0 60 60" role="img" aria-label="ANDMA logo"><circle cx="30" cy="30" r="30" fill="#a13a3a"/><text x="30" y="35" text-anchor="middle" font-size="12" font-weight="700" fill="#fff" font-family="Arial, Helvetica, sans-serif">ANDMA</text></svg>
+        <img class="partner-logo" src="img/partners/Andma.PNG" alt="ANDMA logo">
         <span class="logo-name">ANDMA<small>National Disaster Management Authority</small></span>
       </div>
       <div class="logo-card">
-        <svg viewBox="0 0 60 60" role="img" aria-label="Ministry of Public Health logo"><circle cx="30" cy="30" r="30" fill="#2e7d5b"/><text x="30" y="35" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="Arial, Helvetica, sans-serif">MoPH</text></svg>
+        <img class="partner-logo" src="img/partners/Ministry-of-public-health.png" alt="Ministry of Public Health logo">
         <span class="logo-name">Ministry of Public Health<small>Islamic Emirate of Afghanistan</small></span>
       </div>
     </div>
